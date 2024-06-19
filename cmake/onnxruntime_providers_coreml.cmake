@@ -162,7 +162,7 @@ onnxruntime_add_static_library(onnxruntime_providers_coreml
 )
 
 onnxruntime_add_include_to_target(onnxruntime_providers_coreml
-  onnxruntime_common onnxruntime_framework onnx onnx_proto ${PROTOBUF_LIB} flatbuffers::flatbuffers Boost::mp11
+  onnxruntime_common onnxruntime_framework onnx onnx_proto ${PROTOBUF_LIB} flatbuffers::flatbuffers_shared Boost::mp11
   safeint_interface
 )
 

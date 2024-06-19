@@ -10,7 +10,7 @@
   source_group(TREE ${ONNXRUNTIME_ROOT}/core FILES ${onnxruntime_providers_acl_cc_srcs})
   onnxruntime_add_static_library(onnxruntime_providers_acl ${onnxruntime_providers_acl_cc_srcs})
   onnxruntime_add_include_to_target(onnxruntime_providers_acl
-    onnxruntime_common onnxruntime_framework onnx onnx_proto ${PROTOBUF_LIB} flatbuffers::flatbuffers Boost::mp11 safeint_interface
+    onnxruntime_common onnxruntime_framework onnx onnx_proto ${PROTOBUF_LIB} flatbuffers::flatbuffers_shared Boost::mp11 safeint_interface
   )
 
   target_link_libraries(onnxruntime_providers_acl -L$ENV{LD_LIBRARY_PATH})

@@ -8,7 +8,7 @@
   source_group(TREE ${ONNXRUNTIME_ROOT}/core FILES ${onnxruntime_providers_azure_src})
   onnxruntime_add_static_library(onnxruntime_providers_azure ${onnxruntime_providers_azure_src})
   add_dependencies(onnxruntime_providers_azure ${onnxruntime_EXTERNAL_DEPENDENCIES})
-  onnxruntime_add_include_to_target(onnxruntime_providers_azure onnxruntime_common onnxruntime_framework onnx onnx_proto ${PROTOBUF_LIB} flatbuffers::flatbuffers Boost::mp11)
+  onnxruntime_add_include_to_target(onnxruntime_providers_azure onnxruntime_common onnxruntime_framework onnx onnx_proto ${PROTOBUF_LIB} flatbuffers::flatbuffers_shared Boost::mp11)
   target_link_libraries(onnxruntime_providers_azure PRIVATE onnx onnxruntime_common onnxruntime_framework)
   set_target_properties(onnxruntime_providers_azure PROPERTIES FOLDER "ONNXRuntime")
   set_target_properties(onnxruntime_providers_azure PROPERTIES LINKER_LANGUAGE CXX)

@@ -175,7 +175,7 @@
       endif()
     endif()
 
-    onnxruntime_add_include_to_target(${target} onnxruntime_common onnxruntime_framework onnx onnx_proto ${PROTOBUF_LIB} flatbuffers::flatbuffers)
+    onnxruntime_add_include_to_target(${target} onnxruntime_common onnxruntime_framework onnx onnx_proto ${PROTOBUF_LIB} flatbuffers::flatbuffers_shared)
     if (onnxruntime_ENABLE_TRAINING_OPS)
       onnxruntime_add_include_to_target(${target} onnxruntime_training)
       if (onnxruntime_ENABLE_TRAINING)

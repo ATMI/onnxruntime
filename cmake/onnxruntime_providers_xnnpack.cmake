@@ -13,7 +13,7 @@
   onnxruntime_add_static_library(onnxruntime_providers_xnnpack ${onnxruntime_providers_xnnpack_cc_srcs})
   onnxruntime_add_include_to_target(onnxruntime_providers_xnnpack
     onnxruntime_common onnxruntime_framework onnx onnx_proto ${PROTOBUF_LIB} XNNPACK pthreadpool
-    flatbuffers::flatbuffers Boost::mp11 safeint_interface
+    flatbuffers::flatbuffers_shared Boost::mp11 safeint_interface
   )
 
   # TODO fix stringop-overflow warnings
